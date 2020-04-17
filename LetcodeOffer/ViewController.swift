@@ -49,8 +49,8 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution57_2()
-        print(s.findContinuousSequence(100))
+        let s = Solution58_2()
+        print(s.reverseLeftWords("lrloseumgh", 6))
 
     }
 }

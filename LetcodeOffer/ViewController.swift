@@ -49,8 +49,8 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution58_2()
-        print(s.reverseLeftWords("lrloseumgh", 6))
+        let s = Solution59()
+        print(s.maxSlidingWindow([1,3,-1,-3,5,3,6,7], 2))
 
     }
 }

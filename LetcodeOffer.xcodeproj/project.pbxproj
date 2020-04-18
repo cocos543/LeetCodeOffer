@@ -67,6 +67,7 @@
 		EDF24D5A2432501B00896BE1 /* Solution21.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF24D592432501B00896BE1 /* Solution21.swift */; };
 		EDF24D5C2432E38500896BE1 /* Solution24.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF24D5B2432E38500896BE1 /* Solution24.swift */; };
 		EDFA71592449FE2300DFD362 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EDFA71582449FE2300DFD362 /* README.md */; };
+		EDFA715B244A9ED900DFD362 /* Solution59.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFA715A244A9ED900DFD362 /* Solution59.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		EDF24D592432501B00896BE1 /* Solution21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution21.swift; sourceTree = "<group>"; };
 		EDF24D5B2432E38500896BE1 /* Solution24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution24.swift; sourceTree = "<group>"; };
 		EDFA71582449FE2300DFD362 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		EDFA715A244A9ED900DFD362 /* Solution59.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution59.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 				ED92657E2448A3CA00CF84B1 /* Solution57_2.swift */,
 				ED9265802449F20B00CF84B1 /* Solution58.swift */,
 				ED02BD312449FA90002CE787 /* Solution58_2.swift */,
+				EDFA715A244A9ED900DFD362 /* Solution59.swift */,
 			);
 			path = Letcode;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				ED926530243439BF00CF84B1 /* Solution26.swift in Sources */,
 				ED9A72C324164A5A008E56E2 /* ViewController.swift in Sources */,
 				EDF24D48242F4DCD00896BE1 /* Solution10.swift in Sources */,
+				EDFA715B244A9ED900DFD362 /* Solution59.swift in Sources */,
 				ED9265362435907100CF84B1 /* Solution29.swift in Sources */,
 				ED9265422439D8FA00CF84B1 /* Solution38.swift in Sources */,
 				EDF24D44242F3BD600896BE1 /* Solution09.swift in Sources */,

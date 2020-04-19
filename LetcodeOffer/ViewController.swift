@@ -49,8 +49,10 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution59()
-        print(s.maxSlidingWindow([1,3,-1,-3,5,3,6,7], 2))
-
+        let s = SolutionLetCode3()
+        let increase = [[2,8,4],[2,5,0],[10,9,8]]
+        let requirements = [[2,11,3],[15,10,7],[9,17,12],[8,1,14]]
+        print(s.getTriggerTime(increase, requirements))
+    
     }
 }

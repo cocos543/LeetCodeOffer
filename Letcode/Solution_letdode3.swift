@@ -63,71 +63,56 @@ import Foundation
  */
 
 class SolutionLetCode3 {
-    // 存放还未被触发的剧情, key存在的都是还未触发的
-    var unTiggerStoryMap = [Int: Bool]()
-    
-    // 剧情全部触发了
-    var ret = [Int]()
 
     func getTriggerTime(_ increase: [[Int]], _ requirements: [[Int]]) -> [Int] {
-        var requirements = requirements
-        // 把每个剧情的资源都放到一个数组中, 一共三个数组
-        var story1 = [Int]()
-        var story2 = [Int]()
-        var story3 = [Int]()
+
+        // 因为资源每天都是递增的, 所以要用二分解决, 不然会超时...
+        // 先把每天的资源总数累加起来, 再从资源数组中做二分查找能激活的剧情..
+        var ans = [Int]()
+        
+        var increase = increase
+        for i in 0 ..< increase.count - 1 {
+            increase[i + 1][0] = increase[i][0] + increase[i + 1][0]
+            increase[i + 1][1] = increase[i][1] + increase[i + 1][1]
+            increase[i + 1][2] = increase[i][2] + increase[i + 1][2]
+        }
         
         
-        // 初始化剧情map
         for i in 0 ..< requirements.count {
-            unTiggerStoryMap[i] = true
-            story1.append(requirements[i][0])
-            story2.append(requirements[i][1])
-            story3.append(requirements[i][2])
-        }
-        // 资源分别从小到达排序
-        story1.sort()
-        story2.sort()
-        story3.sort()
-
-        // 初始化返回值为-1
-        ret = Array(repeating: -1, count: requirements.count)
-
-        var curRes = [0, 0, 0]
-
-        for day in 0 ... increase.count {
-            
-            // 增加之前先判断是否能触发
-            canTigger(&curRes, &requirements, day)
-            
-            if unTiggerStoryMap.keys.count == 0 {
-                break
+            // 如果剧情需求是0, 意味着第0天就满足了...
+            if requirements[i][0] == 0 && requirements[i][1] == 0 && requirements[i][2] == 0 {
+                ans.append(0)
+                continue
             }
             
+            var l = 0, r = increase.count - 1
             
-            // 是否已经是最后一天
-            if day < increase.count {
-                // 每天资源都在增加
-                curRes[0] = curRes[0] + increase[day][0]
-                curRes[1] = curRes[1] + increase[day][1]
-                curRes[2] = curRes[2] + increase[day][2]
+            // 二分查找变体算法, 找到第一个大于等于req的资源组
+            while l <= r {
+                let mid = l + (r - l) >> 1
+                if !(increase[mid][0] >= requirements[i][0] &&
+                    increase[mid][1] >= requirements[i][1] &&
+                    increase[mid][2] >= requirements[i][2]) {
+                    l = l + 1
+                }else if mid == 0 || !(
+                    increase[mid - 1][0] >= requirements[i][0] &&
+                    increase[mid - 1][1] >= requirements[i][1] &&
+                    increase[mid - 1][2] >= requirements[i][2]) {
+                    // 如果mid是第一个元素, 或者mid的左边的元素比req小, 那么mid也是, 那么这个元素就是第一个大于等于req了.
+                    ans.append(mid + 1)
+                    break
+                }else {
+                    r = mid - 1
+                }
+            }
+            
+            // 没有找到触发的资源
+            if l > r {
+                ans.append(-1)
             }
         }
-
-        return ret
+        
+        return ans
     }
 
-    // 返回被触发的剧情标号数组, 一次可能触发多个剧情
-    func canTigger(_ curRes: inout [Int], _ requirements: inout [[Int]], _ day: Int) {
-        // 先查询剧情是否已经被触发, 是的话直接返回
-        for key in unTiggerStoryMap.keys {
-            // 判断是否要触发
-            if curRes[0] >= requirements[key][0] &&
-                curRes[1] >= requirements[key][1] &&
-                curRes[2] >= requirements[key][2] {
-                // 触发
-                unTiggerStoryMap.removeValue(forKey: key)
-                ret[key] = day
-            }
-        }
-    }
 }

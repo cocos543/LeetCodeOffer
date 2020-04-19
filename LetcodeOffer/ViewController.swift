@@ -49,10 +49,26 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = SolutionLetCode3()
-        let increase = [[2,8,4],[2,5,0],[10,9,8]]
-        let requirements = [[2,11,3],[15,10,7],[9,17,12],[8,1,14]]
-        print(s.getTriggerTime(increase, requirements))
+        let q = MaxQueue()
+        q.push_back(1)
+        q.push_back(9)
+        q.push_back(4)
+        q.push_back(7)
+        
+        q.pop_front()
+        q.pop_front()
+        print(q.max_value())
+        
+        q.pop_front()
+        q.pop_front()
+        q.pop_front()
+        q.pop_front()
+        
+        q.push_back(2)
+        q.push_back(3)
+        q.push_back(6)
+        
+        print(q.max_value())
     
     }
 }

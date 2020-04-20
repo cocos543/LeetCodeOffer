@@ -49,26 +49,8 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let q = MaxQueue()
-        q.push_back(1)
-        q.push_back(9)
-        q.push_back(4)
-        q.push_back(7)
-        
-        q.pop_front()
-        q.pop_front()
-        print(q.max_value())
-        
-        q.pop_front()
-        q.pop_front()
-        q.pop_front()
-        q.pop_front()
-        
-        q.push_back(2)
-        q.push_back(3)
-        q.push_back(6)
-        
-        print(q.max_value())
+        let s = Solution63()
+        print(s.isStraight([0,0,1,2,5]))
     
     }
 }

@@ -39,7 +39,7 @@ import Foundation
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 
-class Solution63 {
+class Solution61 {
     func isStraight(_ nums: [Int]) -> Bool {
         // 先排序, 然后把0的个数取出来, 最后从第一个非0数字开始, 看成一个循环数组, 到了13后下一个位置就是1
         var nums = nums

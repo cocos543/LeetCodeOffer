@@ -49,8 +49,8 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution63()
-        print(s.isStraight([0,0,1,2,5]))
+        let s = Solution62()
+        print(s.lastRemaining(10, 17))
     
     }
 }

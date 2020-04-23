@@ -49,8 +49,8 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution63()
-        print(s.maxProfit2([7,1,5,3,6,4]))
+        let s = Solution64()
+        print(s.sumNums(9))
     
     }
 }

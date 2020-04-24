@@ -49,8 +49,8 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution64()
-        print(s.sumNums(9))
+        let s = Solution65()
+        print(s.add(-5, -17))
     
     }
 }

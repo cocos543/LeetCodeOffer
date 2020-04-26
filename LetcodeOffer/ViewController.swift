@@ -49,8 +49,9 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution66()
-        print(s.constructArr([1,2,3,4,5]))
+        let s = Solution67()
+        print(s.strToInt("+1"))
+        
     
     }
 }

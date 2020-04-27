@@ -21,6 +21,7 @@
 		ED8B0A6F24532C9F00E0ED9D /* Solution65.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0A6E24532C9F00E0ED9D /* Solution65.swift */; };
 		ED8B0A71245419D800E0ED9D /* Solution66.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0A70245419D800E0ED9D /* Solution66.swift */; };
 		ED8B0A732455D59700E0ED9D /* Solution67.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0A722455D59700E0ED9D /* Solution67.swift */; };
+		ED8B0A772457296900E0ED9D /* Solution68.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0A752457296900E0ED9D /* Solution68.cpp */; };
 		ED92652E243439A400CF84B1 /* Solution25.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92652D243439A400CF84B1 /* Solution25.swift */; };
 		ED926530243439BF00CF84B1 /* Solution26.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92652F243439BF00CF84B1 /* Solution26.swift */; };
 		ED92653224344CD400CF84B1 /* Solution27.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92653124344CD400CF84B1 /* Solution27.swift */; };
@@ -95,6 +96,9 @@
 		ED8B0A6E24532C9F00E0ED9D /* Solution65.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution65.swift; sourceTree = "<group>"; };
 		ED8B0A70245419D800E0ED9D /* Solution66.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution66.swift; sourceTree = "<group>"; };
 		ED8B0A722455D59700E0ED9D /* Solution67.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution67.swift; sourceTree = "<group>"; };
+		ED8B0A742457296800E0ED9D /* LetcodeOffer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LetcodeOffer-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED8B0A752457296900E0ED9D /* Solution68.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution68.cpp; sourceTree = "<group>"; };
+		ED8B0A762457296900E0ED9D /* Solution68.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution68.hpp; sourceTree = "<group>"; };
 		ED92652D243439A400CF84B1 /* Solution25.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution25.swift; sourceTree = "<group>"; };
 		ED92652F243439BF00CF84B1 /* Solution26.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution26.swift; sourceTree = "<group>"; };
 		ED92653124344CD400CF84B1 /* Solution27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution27.swift; sourceTree = "<group>"; };
@@ -266,6 +270,9 @@
 				ED8B0A6E24532C9F00E0ED9D /* Solution65.swift */,
 				ED8B0A70245419D800E0ED9D /* Solution66.swift */,
 				ED8B0A722455D59700E0ED9D /* Solution67.swift */,
+				ED8B0A752457296900E0ED9D /* Solution68.cpp */,
+				ED8B0A762457296900E0ED9D /* Solution68.hpp */,
+				ED8B0A742457296800E0ED9D /* LetcodeOffer-Bridging-Header.h */,
 			);
 			path = Letcode;
 			sourceTree = "<group>";
@@ -302,6 +309,7 @@
 				TargetAttributes = {
 					ED9A72BA24164A5A008E56E2 = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -379,6 +387,7 @@
 				ED646AA2244DDD7600AC4E3F /* Solution61.swift in Sources */,
 				EDF24D4E243052BF00896BE1 /* Solution13.swift in Sources */,
 				ED9A72C124164A5A008E56E2 /* SceneDelegate.swift in Sources */,
+				ED8B0A772457296900E0ED9D /* Solution68.cpp in Sources */,
 				ED9265812449F20B00CF84B1 /* Solution58.swift in Sources */,
 				EDF24D4A242F6C6900896BE1 /* Solution11.swift in Sources */,
 				EDF24D4C24302E2E00896BE1 /* Solution12.swift in Sources */,
@@ -552,6 +561,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LetcodeOffer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -560,6 +570,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cocos.com.LetcodeOffer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Letcode/LetcodeOffer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -569,6 +581,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = LetcodeOffer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -577,6 +590,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cocos.com.LetcodeOffer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Letcode/LetcodeOffer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

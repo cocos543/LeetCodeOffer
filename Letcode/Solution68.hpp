@@ -36,6 +36,7 @@
          }else if (root->val > p->val && root->val > q->val) {
              return lowestCommonAncestor(root->left, p, q);
          }
+         // 如果p或者q等于root, 也会走到这里来的, 所以符合要求.
          return root;
      }
  };

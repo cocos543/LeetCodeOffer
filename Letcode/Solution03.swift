@@ -33,6 +33,19 @@ import UIKit
 /// 简单的思路: 因为元素数值不会超过索引范围, 所以直接把数值作为数组下标, 在新创建的数组中, 把对应的位置的内容+1, 如果内容超过2了, 则这个元素就是答案
 class Solution03: NSObject {
     func findRepeatNumber(_ nums: [Int]) -> Int {
+
+        var map = Array(repeating: 0, count: nums.count)
+        for e in nums {
+            if map[e] > 0 {
+                return e
+            }else {
+                map[e] = 1
+            }
+        }
+        return -1
+    }
+
+    func findRepeatNumber2(_ nums: [Int]) -> Int {
         var bucket = [Int](repeating: 0, count: nums.count)
         for n in nums {
             bucket[n] = bucket[n] + 1;

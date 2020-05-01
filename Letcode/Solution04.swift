@@ -40,7 +40,52 @@ import UIKit
 
  */
 class Solution04: NSObject {
+    // 从右上角看, 比如15, 15的左边小于15, 下边大于15, 可以看成二叉搜索树, 这样搜索效率更高
     func findNumberIn2DArray(_ matrix: [[Int]], _ target: Int) -> Bool {
+        // 从右上角出发, 元素e如果比target小, 则e等于下方元素; 比target大, 则e等于左方元素.
+        if matrix.count == 0 || matrix[0].count == 0 {
+            return false
+        }
+        var rowIdx = 0, columnIdx = matrix[0].count - 1
+        while rowIdx < matrix.count && columnIdx >= 0 {
+            let e = matrix[rowIdx][columnIdx]
+            if e == target {
+                return true
+            }else if e > target {
+                columnIdx -= 1
+            }else {
+                rowIdx += 1
+            }
+        }
+        return false
+    }
+    
+    // 思路一样, 从左到右, 从上到下搜索, 代码更佳直观简洁
+    func findNumberIn2DArray3(_ matrix: [[Int]], _ target: Int) -> Bool {
+        if matrix.count == 0 || matrix[0].count == 0 {
+            return false
+        }
+        
+        var jstop = matrix[0].count
+        for i in 0 ..< matrix.count {
+            for j in 0 ..< jstop {
+                if target == matrix[i][j] {
+                    return true
+                }
+                if target < matrix[i][j] {
+                    if j == 0 {
+                        return false
+                    }
+                    jstop = j
+                    break
+                }
+            }
+        }
+        return false
+
+    }
+    
+    func findNumberIn2DArray2(_ matrix: [[Int]], _ target: Int) -> Bool {
         // 先找出大于targer的第一行最大的元素位置, 和第一列最大的元素位置, 之后targer只需要在这个区域以内查找即可
         
         // 判空
@@ -70,14 +115,6 @@ class Solution04: NSObject {
         }
         
         // 从可能范围内查找出目标元素
-        var j = 1, i = 1
-        while j < maxJ {
-            j = j + 1
-            while i < maxI {
-                i = i + 1
-                
-            }
-        }
         for j in stride(from: 1, to: maxJ, by: 1) {
             for i in stride(from: 1, to: maxI, by: 1) {
                 if matrix[j][i] == target {

@@ -49,12 +49,7 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution04()
-        print(s.findNumberIn2DArray([
-          [1,   4,  7, 11, 15],
-          [2,   5,  8, 12, 19],
-          [3,   6,  9, 16, 22],
-          [10, 13, 14, 17, 24],
-          [18, 21, 23, 26, 30]], 5))
+        let s = Solution07()
+        print(s.buildTree([3,9,20,15,7], [9,3,15,20,7]))
     }
 }

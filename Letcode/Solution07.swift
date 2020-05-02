@@ -40,6 +40,24 @@
 /// 依次递推, 即可构建出来.
 class Solution07 {
     func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
+        // preorder的第一个元素就是根节点, 在preorder数组中, 元素的组成: 根+ 左 + 右
+        // 所以再从中序数组里面找到根的位置就可以知道左右子树分别在前序数组中占据的长度了
+        // 知道子树的前序和中序之后, 递归处理即可, 还是比较简单的题目
+
+        if preorder.count == 0 { // 前序数组和中序数组都是一样长的
+            return nil
+        }
+        let root = TreeNode(preorder[0])
+
+        let rootIndex = inorder.firstIndex(of: preorder[0])!
+        // 处理左子树
+        root.left = buildTree(Array(preorder[1 ..< 1 + rootIndex]), Array(inorder[0 ..< rootIndex]))
+        root.right = buildTree(Array(preorder[1 + rootIndex ..< 1 + rootIndex + (inorder.count-1-rootIndex)]), Array(inorder[1 + rootIndex ..< inorder.count]))
+
+        return root
+    }
+    
+    func buildTree2(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
         // 两个数组的长度肯定是一样的
 
         // 如果数组只有一个元素, 那么这个元素就是子树的根节点了

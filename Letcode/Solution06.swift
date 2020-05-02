@@ -33,7 +33,19 @@
  */
 
 class Solution06 {
+    var ans: [Int] = [Int]()
+
     func reversePrint(_ head: ListNode?) -> [Int] {
+        // 长度最多1万, 可以用递归把遍历出来的数值存入数组即可
+        if head == nil {
+            return ans
+        }
+        reversePrint(head!.next)
+        _ = ans.append(head!.val)
+        return ans
+    }
+    
+    func reversePrint2(_ head: ListNode?) -> [Int] {
         var arr: [Int] = []
         var head = head
         

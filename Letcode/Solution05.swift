@@ -10,9 +10,24 @@ import Foundation
 
 class Solution05 {
     
+    func replaceSpace(_ s: String) -> String {
+        if s.count == 0 {
+            return s
+        }
+        var newS = ""
+        for ele in s {
+            if ele == " " {
+                newS.append("%20")
+            }else {
+                newS.append(ele)
+            }
+        }
+        return newS
+    }
+    
     /// 空间复杂度是O(n), 时间复杂度O(n)
     /// - Parameter s: 原字符串
-    func replaceSpace(_ s: String) -> String {
+    func replaceSpace2(_ s: String) -> String {
         if s.count == 0 {
             return ""
         }

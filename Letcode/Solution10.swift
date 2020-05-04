@@ -46,4 +46,13 @@ class Solution10 {
 
         return N
     }
+    
+    // 递归会超时
+    func fib2(_ n: Int) -> Int {
+        // 换成递归
+        if n == 1 || n == 0 {
+            return n
+        }
+        return (fib(n-1) + fib(n-2)) % 1000000007
+    }
 }

@@ -50,6 +50,10 @@ class ViewController: UIViewController {
         node2.left = node1
 
         let s = Solution07()
-        print(s.buildTree([3,9,20,15,7], [9,3,15,20,7]))
+        let arr = [1,[2,3, [6,7]],4,5] as [Any]
+        let iterator = RecursionArrayIterator(arr)
+        
+        print(iterator.allObjects())
+        
     }
 }

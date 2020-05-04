@@ -19,6 +19,8 @@
 		ED646AA624508E9E00AC4E3F /* Solution63.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED646AA524508E9E00AC4E3F /* Solution63.swift */; };
 		ED646AA82451C73100AC4E3F /* Solution64.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED646AA72451C73100AC4E3F /* Solution64.swift */; };
 		ED760E47245882BC007203E1 /* Solution68_2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ED760E45245882BC007203E1 /* Solution68_2.cpp */; };
+		ED760E4A245E6DF8007203E1 /* Solution10_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED760E49245E6DF8007203E1 /* Solution10_2.swift */; };
+		ED760E4C245FB969007203E1 /* RecursionArrayIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED760E4B245FB969007203E1 /* RecursionArrayIterator.swift */; };
 		ED8B0A6F24532C9F00E0ED9D /* Solution65.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0A6E24532C9F00E0ED9D /* Solution65.swift */; };
 		ED8B0A71245419D800E0ED9D /* Solution66.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0A70245419D800E0ED9D /* Solution66.swift */; };
 		ED8B0A732455D59700E0ED9D /* Solution67.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8B0A722455D59700E0ED9D /* Solution67.swift */; };
@@ -96,6 +98,8 @@
 		ED646AA72451C73100AC4E3F /* Solution64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution64.swift; sourceTree = "<group>"; };
 		ED760E45245882BC007203E1 /* Solution68_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution68_2.cpp; sourceTree = "<group>"; };
 		ED760E46245882BC007203E1 /* Solution68_2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution68_2.hpp; sourceTree = "<group>"; };
+		ED760E49245E6DF8007203E1 /* Solution10_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution10_2.swift; sourceTree = "<group>"; };
+		ED760E4B245FB969007203E1 /* RecursionArrayIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursionArrayIterator.swift; sourceTree = "<group>"; };
 		ED8B0A6E24532C9F00E0ED9D /* Solution65.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution65.swift; sourceTree = "<group>"; };
 		ED8B0A70245419D800E0ED9D /* Solution66.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution66.swift; sourceTree = "<group>"; };
 		ED8B0A722455D59700E0ED9D /* Solution67.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution67.swift; sourceTree = "<group>"; };
@@ -174,11 +178,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED760E48245E67D3007203E1 /* Letcode2 */ = {
+			isa = PBXGroup;
+			children = (
+				ED760E4B245FB969007203E1 /* RecursionArrayIterator.swift */,
+			);
+			path = Letcode2;
+			sourceTree = "<group>";
+		};
 		ED9A72B224164A5A008E56E2 = {
 			isa = PBXGroup;
 			children = (
 				EDF24D45242F41D500896BE1 /* Stack.swift */,
 				ED63F5B72421D3C500DB0387 /* BaseClass.swift */,
+				ED760E48245E67D3007203E1 /* Letcode2 */,
 				ED9A72D224164A68008E56E2 /* Letcode */,
 				ED9A72BD24164A5A008E56E2 /* LetcodeOffer */,
 				ED9A72BC24164A5A008E56E2 /* Products */,
@@ -218,6 +231,7 @@
 				EDDB089C242314C4007D1AAC /* Solution07.swift */,
 				EDF24D43242F3BD600896BE1 /* Solution09.swift */,
 				EDF24D47242F4DCD00896BE1 /* Solution10.swift */,
+				ED760E49245E6DF8007203E1 /* Solution10_2.swift */,
 				EDF24D49242F6C6900896BE1 /* Solution11.swift */,
 				EDF24D4B24302E2E00896BE1 /* Solution12.swift */,
 				EDF24D4D243052BF00896BE1 /* Solution13.swift */,
@@ -362,6 +376,7 @@
 				ED02BD322449FA90002CE787 /* Solution58_2.swift in Sources */,
 				ED926530243439BF00CF84B1 /* Solution26.swift in Sources */,
 				ED9A72C324164A5A008E56E2 /* ViewController.swift in Sources */,
+				ED760E4C245FB969007203E1 /* RecursionArrayIterator.swift in Sources */,
 				EDF24D48242F4DCD00896BE1 /* Solution10.swift in Sources */,
 				ED646AA624508E9E00AC4E3F /* Solution63.swift in Sources */,
 				EDFA715B244A9ED900DFD362 /* Solution59.swift in Sources */,
@@ -373,6 +388,7 @@
 				EDF24D5C2432E38500896BE1 /* Solution24.swift in Sources */,
 				ED63F59C24206DD700DB0387 /* Solution04.swift in Sources */,
 				ED926550243CCB2500CF84B1 /* Solution45.swift in Sources */,
+				ED760E4A245E6DF8007203E1 /* Solution10_2.swift in Sources */,
 				ED92653A243780A200CF84B1 /* Solution31.swift in Sources */,
 				ED926546243B6C2E00CF84B1 /* Solution39.swift in Sources */,
 				EDF24D562431A89600896BE1 /* Solution17.swift in Sources */,

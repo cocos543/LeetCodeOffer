@@ -10,9 +10,38 @@ import Foundation
 
 class Solution16 {
     
+    func myPow(_ x: Double, _ n: Int) -> Double {
+        // f(n) = f(n/2) * f(n/2) * (isOdd -> x)
+        if n == 0 {
+            return 1
+        }
+        if n == 1 {
+            return x
+        }
+
+        var neg = 1
+        var n = n
+        if n < 0 {
+            neg = -1
+            n = -n
+        }
+        
+        let isOdd = n % 2 == 1
+        var ans = myPow(x, n >> 1)
+        ans = ans * ans
+
+        if isOdd {
+            ans *= x
+        }
+        
+        if neg < 0 {
+            return 1 / ans
+        }
+        return ans
+    }
     
     // 通过观察规律再解题
-    func myPow(_ x: Double, _ n: Int) -> Double {
+    func myPow2(_ x: Double, _ n: Int) -> Double {
         // 2^16, 实际上就是16个2相乘, 那么就可以看作两组, 8个2相乘, 8个2相乘. 也就是2^8 * 2^8
         // 归纳一下, 就是f(n) = f(n/2) * f(n/2)
         

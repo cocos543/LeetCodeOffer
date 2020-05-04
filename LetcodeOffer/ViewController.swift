@@ -49,11 +49,7 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution07()
-        let arr = [1,[2,3, [6,7]],4,5] as [Any]
-        let iterator = RecursionArrayIterator(arr)
-        
-        print(iterator.allObjects())
-        
+        let s = Solution16()
+        print(s.myPow(2, -2))
     }
 }

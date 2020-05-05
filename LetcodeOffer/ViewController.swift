@@ -49,7 +49,9 @@ class ViewController: UIViewController {
         node3.left = node2
         node2.left = node1
 
-        let s = Solution16()
-        print(s.myPow(2, -2))
+        let s = Solution17()
+        print(s.printNumbers(2))
+        
+    
     }
 }

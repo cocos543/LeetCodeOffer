@@ -41,7 +41,28 @@ import Foundation
  */
 
 class Solution18 {
+    // 思路一样...
+    // 剑指offer里面是提供了一个要删除的节点, 删除该节点时间复杂度O(1)
+    // 思路就是把要删除的节点a下一个节点b的值复制到a节点上, 再把b节点删了.思路奇特
     func deleteNode(_ head: ListNode?, _ val: Int) -> ListNode? {
+        if head == nil {
+            return nil
+        }
+        if head!.val == val {
+            return head!.next
+        }
+        var p = head!
+        while p.next != nil {
+            if p.next!.val == val {
+                p.next = p.next!.next
+                break
+            }
+            p = p.next!
+        }
+        return head
+    }
+    
+    func deleteNode2(_ head: ListNode?, _ val: Int) -> ListNode? {
         // 如果节点的下一个节点是目标节点, 则删除下一个节点
         if head?.val == val {
             return head?.next

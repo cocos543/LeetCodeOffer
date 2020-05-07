@@ -9,7 +9,36 @@
 import Foundation
 
 class Solution21 {
+    
     func exchange(_ nums: [Int]) -> [Int] {
+        // 用两个指针p1, p2指向数组开头和结尾, p1遇到偶数就停下来, p2遇到奇数停下来
+        // 交换两个指针所指的数字之后, 继续重复操作, 直到p1=p2
+        if nums.count <= 1 {
+            return nums
+        }
+        var nums = nums
+        var p1 = 0, p2 = nums.count-1
+        while p1 <= p2 {
+            if nums[p1] % 2 == 0 && nums[p2] % 2 == 1 {
+                let t = nums[p1]
+                nums[p1] = nums[p2]
+                nums[p2] = t
+                p1 += 1
+                p2 -= 1
+                continue
+            }
+
+            if nums[p1] % 2 == 1 {
+                p1 += 1
+            }
+            if nums[p2] % 2 == 0 {
+                p2 -= 1
+            }
+        }
+        return nums
+    }
+    
+    func exchange2(_ nums: [Int]) -> [Int] {
         
         if nums.count <= 1 {
             return nums

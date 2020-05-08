@@ -26,6 +26,31 @@ import Foundation
 
 class Solution24 {
     func getKthFromEnd(_ head: ListNode?, _ k: Int) -> ListNode? {
+        // 注意一下倒数第k个, k从1开始不是从0, 用快慢指针即可, 比较简单
+        if head == nil {
+            return head
+        }
+
+        var pfast = head
+        var pslow = head
+        var k = k
+        while k > 1 {
+            if pfast!.next != nil {
+                pfast = pfast!.next
+                k -= 1
+            }else {
+                return nil
+            }
+        }
+        // 这里pfast不可能为空
+        while pfast!.next != nil {
+            pslow = pslow!.next
+            pfast = pfast!.next
+        }
+        return pslow
+    }
+    
+    func getKthFromEnd2(_ head: ListNode?, _ k: Int) -> ListNode? {
         // 经典的题目, 先让指针p1往后移动k个节点, 然后在创建一个指针p2, p1和p2同时移动, 直到p1为空, p2就是目标节点了
         if head == nil || k == 0 {
             return nil

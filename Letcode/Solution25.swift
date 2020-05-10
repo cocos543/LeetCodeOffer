@@ -19,7 +19,7 @@ import Foundation
  *     }
  * }
  */
-class Solution {
+class Solution25 {
     func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         // 跟合并两个有序数组一样, 主要处理合并后的
         if l1 == nil {

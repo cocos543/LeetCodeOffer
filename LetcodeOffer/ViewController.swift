@@ -40,17 +40,14 @@ class ViewController: UIViewController {
         let node2 = TreeNode(2)
         let node3 = TreeNode(3)
         let node4 = TreeNode(4)
-        node5.right = node6
-        node5.left = node3
+        
+        node1.left = node2
+        node1.right = node3
+        node2.left = node4
+        
 
-        node6.left = node7
-
-        node3.right = node4
-        node3.left = node2
-        node2.left = node1
-
-        let s = Solution17()
-        print(s.printNumbers(2))
+        let s = Solution26()
+        print(s.isSubStructure(node1, TreeNode(3)))
         
     
     }

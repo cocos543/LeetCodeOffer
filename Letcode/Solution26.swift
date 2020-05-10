@@ -10,7 +10,7 @@ import Foundation
 
 /*
  面试题26. 树的子结构
- 
+
  输入两棵二叉树A和B，判断B是不是A的子结构。(约定空树不是任意一个树的子结构)
 
  B是A的子结构， 即 A中有出现和B相同的结构和节点值。
@@ -45,7 +45,7 @@ import Foundation
  来源：力扣（LeetCode）
  链接：https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof
  著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
- 
+
  */
 
 /**
@@ -62,11 +62,48 @@ import Foundation
  * }
  */
 
-class Solution25 {
+class Solution26 {
     func isSubStructure(_ A: TreeNode?, _ B: TreeNode?) -> Bool {
+        // 遍历A树的所有节点, 分别和B树匹配, 如果节点值相同则继续往下匹配.
+        // 用先序遍历 根左右
+        if B == nil {
+            return false
+        }
+        
+        return _preOrder2(A, B)
+    }
+
+    // 因为需要单独判断B是否为空树, 所以不能直接在isSubStructure中做递归算法
+    func _preOrder2(_ A: TreeNode?, _ B: TreeNode?) -> Bool {
+        if _isSameTree2(A, B) {
+            return true
+        }
+        if A == nil {
+            return false
+        }
+        return _preOrder2(A!.left, B) || _preOrder2(A!.right, B)
+    }
+
+    func _isSameTree2(_ A: TreeNode?, _ B: TreeNode?) -> Bool {
+        if A == nil || B == nil {
+            // 只有A为空B不为空时, B才不是A的子结构
+            // 其他情况B都是A的子结构(意味着B可以只是A中间一部分)
+            if A == nil && B != nil {
+                return false
+            }else {
+                return true
+            }
+        }
+        if A!.val != B!.val {
+            return false
+        }
+        return _isSameTree2(A!.left, B!.left) && _isSameTree2(A!.right, B!.right)
+    }
+
+    func isSubStructure2(_ A: TreeNode?, _ B: TreeNode?) -> Bool {
         // A树的每一个节点都可以是B树的根节点, 所以需要先遍历A树, 把每一个节点都尝试当作B树的根节点, 和B树比较
         // 比较的过程可以看成是递归, 例如, A树的节点a, 和B树根节点相同, 则继续递归比较a节点的左右节点
-        
+
         // 这里直接用前序遍历, 中, 左, 右
         if A == nil || B == nil {
             return false
@@ -82,7 +119,7 @@ class Solution25 {
 
         if _isSameTree(A, B) {
             return true
-        }else {
+        } else {
             return _preOrder(A!.left, B) || _preOrder(A!.right, B)
         }
     }
@@ -92,15 +129,15 @@ class Solution25 {
         if B == nil {
             return true
         }
-        
+
         if A == nil {
             // B不为空但是A已经是空的, 说明结构肯定不匹配, 返回false
             return false
         }
-        
+
         if A!.val == B!.val {
             return _isSameTree(A!.left, B!.left) && _isSameTree(A!.right, B!.right)
-        }else {
+        } else {
             return false
         }
     }

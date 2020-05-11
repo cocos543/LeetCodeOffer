@@ -44,6 +44,17 @@ import Foundation
  */
 class Solution27 {
     func mirrorTree(_ root: TreeNode?) -> TreeNode? {
+        // 每一个节点要做的工作就是交换左右节点, 再把自己返回即可
+        if root == nil {
+            return nil
+        }
+        let t = root!.left
+        root!.left = mirrorTree(root!.right)
+        root!.right = mirrorTree(t)
+        return root
+    }
+    
+    func mirrorTree2(_ root: TreeNode?) -> TreeNode? {
         // 比较简单, 当前节点的左节点等于右节点, 右节点等于左节点即可. 然后递归处理各个子节点
         if root == nil {
             return nil

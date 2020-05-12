@@ -51,6 +51,41 @@ import Foundation
 class Solution28 {
 
     func isSymmetric(_ root: TreeNode?) -> Bool {
+        // 对二叉树进行中左右和中右左遍历, 对比遍历结果是否相同
+        if root == nil {
+            return true
+        }
+        var result1 = [Int?]()
+        var result2 = [Int?]()
+        prelr(root, &result1)
+        prerl(root, &result2)
+
+        for i in 0 ..< result1.count {
+            if result1[i] != result2[i] {
+                return false
+            }
+        }
+        return true
+    }
+
+    func prelr(_ root: TreeNode?, _ result: inout [Int?]) {
+        result.append(root?.val)
+        if root == nil {
+            return
+        }
+        prelr(root!.left, &result)
+        prelr(root!.right, &result)
+    }
+    func prerl(_ root: TreeNode?, _ result: inout [Int?]) {
+        result.append(root?.val)
+        if root == nil {
+            return
+        }
+        prerl(root!.right, &result)
+        prerl(root!.left, &result)
+    }
+
+    func isSymmetric2(_ root: TreeNode?) -> Bool {
         // 先做一次前序遍历, 根左右, 得到一个数组
         // 再做一次类前序遍历, 根右左, 得到一个数组, 如果两个数组一样, 二叉树就是对称的了.
 
@@ -96,11 +131,15 @@ class Solution28 {
     }
     
     // 第二种代码, 演示了如何在一个递归里开始递归两种遍历顺序
-    func isSymmetric2(_ root: TreeNode?) -> Bool {
-        return false
+    func isSymmetric1(_ root: TreeNode?) -> Bool {
+        if root == nil {
+            return true
+        }
+        
+        return isSymmetric1(root, root)
     }
     
-    func isSymmetric2(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
+    func isSymmetric1(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
         
         if root1 == nil && root2 == nil {
             return true
@@ -113,6 +152,6 @@ class Solution28 {
         }
         
         
-        return isSymmetric2(root1?.left, root2?.right) && isSymmetric2(root1?.right, root2?.left)
+        return isSymmetric1(root1?.left, root2?.right) && isSymmetric1(root1?.right, root2?.left)
     }
 }

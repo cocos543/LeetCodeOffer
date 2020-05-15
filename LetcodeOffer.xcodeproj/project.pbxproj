@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED02BD322449FA90002CE787 /* Solution58_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED02BD312449FA90002CE787 /* Solution58_2.swift */; };
 		ED0E584A2466E7FA00211F03 /* Solution24.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0E58492466E7FA00211F03 /* Solution24.swift */; };
+		ED0E5858246EC02C00211F03 /* Solution32_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0E5857246EC02C00211F03 /* Solution32_3.swift */; };
 		ED63F59C24206DD700DB0387 /* Solution04.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63F59B24206DD700DB0387 /* Solution04.swift */; };
 		ED63F5B42421C8D700DB0387 /* Solution05.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63F5B32421C8D700DB0387 /* Solution05.swift */; };
 		ED63F5B62421D2A900DB0387 /* Solution06.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63F5B52421D2A900DB0387 /* Solution06.swift */; };
@@ -88,6 +89,7 @@
 /* Begin PBXFileReference section */
 		ED02BD312449FA90002CE787 /* Solution58_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution58_2.swift; sourceTree = "<group>"; };
 		ED0E58492466E7FA00211F03 /* Solution24.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution24.swift; sourceTree = "<group>"; };
+		ED0E5857246EC02C00211F03 /* Solution32_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution32_3.swift; sourceTree = "<group>"; };
 		ED63F59B24206DD700DB0387 /* Solution04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution04.swift; sourceTree = "<group>"; };
 		ED63F5B32421C8D700DB0387 /* Solution05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution05.swift; sourceTree = "<group>"; };
 		ED63F5B52421D2A900DB0387 /* Solution06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution06.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				ED926539243780A200CF84B1 /* Solution31.swift */,
 				ED92653B24378B8200CF84B1 /* Solution32.swift */,
 				ED92653D24388FB300CF84B1 /* Solution32_2.swift */,
+				ED0E5857246EC02C00211F03 /* Solution32_3.swift */,
 				ED92653F2438A0A600CF84B1 /* Solution33.swift */,
 				ED9265412439D8FA00CF84B1 /* Solution38.swift */,
 				ED9265432439EB5F00CF84B1 /* Solution38.png */,
@@ -414,6 +417,7 @@
 				ED9A72C124164A5A008E56E2 /* SceneDelegate.swift in Sources */,
 				ED8B0A772457296900E0ED9D /* Solution68.cpp in Sources */,
 				ED9265812449F20B00CF84B1 /* Solution58.swift in Sources */,
+				ED0E5858246EC02C00211F03 /* Solution32_3.swift in Sources */,
 				EDF24D4A242F6C6900896BE1 /* Solution11.swift in Sources */,
 				EDF24D4C24302E2E00896BE1 /* Solution12.swift in Sources */,
 				ED92653E24388FB300CF84B1 /* Solution32_2.swift in Sources */,

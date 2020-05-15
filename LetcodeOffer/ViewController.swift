@@ -46,9 +46,12 @@ class ViewController: UIViewController {
         node2.left = node4
         
 
-        let s = Solution26()
-        print(s.isSubStructure(node1, TreeNode(3)))
-        
+        let s = Solution32_3()
+        print(s.levelOrder(node1))
+        var a = [1,2,3,4]
+        var arr = [[Int]]()
+        arr.append(Array(a.reversed()))
+        print(arr)
     
     }
 }

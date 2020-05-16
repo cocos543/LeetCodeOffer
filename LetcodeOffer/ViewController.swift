@@ -46,12 +46,8 @@ class ViewController: UIViewController {
         node2.left = node4
         
 
-        let s = Solution32_3()
-        print(s.levelOrder(node1))
-        var a = [1,2,3,4]
-        var arr = [[Int]]()
-        arr.append(Array(a.reversed()))
-        print(arr)
+        let s = Solution33()
+        print(s.verifyPostorder([4,6,7,5]))
     
     }
 }

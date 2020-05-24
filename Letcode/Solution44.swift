@@ -9,6 +9,7 @@
 import Foundation
 
 class Solution44 {
+    // 找规律的题目好难, 蛋疼啊...
     func findNthDigit(_ n: Int) -> Int {
         // 找规律,  1位数的有10个
         // 2位数的, 10-99, 一共90个
@@ -39,8 +40,10 @@ class Solution44 {
         return Int(pow(10, Double(digits - 1))) * 9
     }
     
+    // 这里传入的n和本题一开始的n已经是不同意思了要注意.
+    // 这里的n是表示答案是在一个位数等于digits位的首个数字-->之后的第n位
     func digitAtIndex(_ n: Int, _ digits: Int) -> Int {
-        // 先得到digits位的数字, 第一个是多少
+        // 先得到digits位的数字, 第一个数字是多少
         var first = 0
         if digits > 1 {
             // 例如digits=2, 那么first=10

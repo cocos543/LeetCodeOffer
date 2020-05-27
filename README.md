@@ -1,3 +1,7 @@
+# 暂停
+
+暂停更新, 意义不大
+
 # LeetCodeOffer
 剑指offer
 

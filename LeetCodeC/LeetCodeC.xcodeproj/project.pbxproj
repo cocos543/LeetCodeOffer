@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EDCFD4C426310A4200043A4F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD4C326310A4200043A4F /* main.c */; };
+		EDCFD4D12631186E00043A4F /* Solution03.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD4D02631186E00043A4F /* Solution03.c */; };
+		EDCFD4D826311B5400043A4F /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD4D726311B5400043A4F /* utils.c */; };
+		EDCFD4E12631295000043A4F /* Solution04.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD4E02631295000043A4F /* Solution04.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,13 @@
 /* Begin PBXFileReference section */
 		EDCFD4C026310A4200043A4F /* LeetCodeC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCodeC; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCFD4C326310A4200043A4F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EDCFD4CF2631186E00043A4F /* Solution03.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solution03.h; sourceTree = "<group>"; };
+		EDCFD4D02631186E00043A4F /* Solution03.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Solution03.c; sourceTree = "<group>"; };
+		EDCFD4D626311B5400043A4F /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		EDCFD4D726311B5400043A4F /* utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
+		EDCFD4DC26311BD000043A4F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EDCFD4DF2631295000043A4F /* Solution04.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solution04.h; sourceTree = "<group>"; };
+		EDCFD4E02631295000043A4F /* Solution04.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Solution04.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,9 @@
 		EDCFD4B726310A4200043A4F = {
 			isa = PBXGroup;
 			children = (
+				EDCFD4DC26311BD000043A4F /* PrefixHeader.pch */,
+				EDCFD4D626311B5400043A4F /* utils.h */,
+				EDCFD4D726311B5400043A4F /* utils.c */,
 				EDCFD4C226310A4200043A4F /* LeetCodeC */,
 				EDCFD4C126310A4200043A4F /* Products */,
 			);
@@ -57,9 +70,45 @@
 		EDCFD4C226310A4200043A4F /* LeetCodeC */ = {
 			isa = PBXGroup;
 			children = (
+				EDCFD4D32631188100043A4F /* Node */,
+				EDCFD4CD263117B500043A4F /* Stack */,
+				EDCFD4CC263117B000043A4F /* Sort */,
+				EDCFD4CB263117AA00043A4F /* Queue */,
 				EDCFD4C326310A4200043A4F /* main.c */,
+				EDCFD4CF2631186E00043A4F /* Solution03.h */,
+				EDCFD4D02631186E00043A4F /* Solution03.c */,
+				EDCFD4DF2631295000043A4F /* Solution04.h */,
+				EDCFD4E02631295000043A4F /* Solution04.c */,
 			);
 			path = LeetCodeC;
+			sourceTree = "<group>";
+		};
+		EDCFD4CB263117AA00043A4F /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		EDCFD4CC263117B000043A4F /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		EDCFD4CD263117B500043A4F /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stack;
+			sourceTree = "<group>";
+		};
+		EDCFD4D32631188100043A4F /* Node */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Node;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDCFD4D826311B5400043A4F /* utils.c in Sources */,
 				EDCFD4C426310A4200043A4F /* main.c in Sources */,
+				EDCFD4E12631295000043A4F /* Solution04.c in Sources */,
+				EDCFD4D12631186E00043A4F /* Solution03.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

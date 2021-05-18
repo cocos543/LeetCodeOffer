@@ -49,10 +49,9 @@ bool findNumberIn2DArray(int **matrix, int matrixSize, int *matrixColSize, int t
         }else if (val < target) {
             y++;
         }else {
-            
+            x--;
         }
     }
-    
 
     return false;
 }

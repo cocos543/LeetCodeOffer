@@ -18,6 +18,7 @@
 		ED39A1B3263562DE00272086 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39A1B2263562DE00272086 /* Stack.swift */; };
 		ED39A1BB26364F3200272086 /* Solution10.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39A1BA26364F3200272086 /* Solution10.swift */; };
 		ED39A1BE2636988D00272086 /* Solution10_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED39A1BD2636988C00272086 /* Solution10_2.swift */; };
+		ED456A4E264622910055FDBF /* Solution15.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED456A4D264622910055FDBF /* Solution15.swift */; };
 		EDCFD4F72632584500043A4F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD4F62632584500043A4F /* main.swift */; };
 		EDCFD50326325EEE00043A4F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD50226325EEE00043A4F /* Utils.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		ED39A1B2263562DE00272086 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		ED39A1BA26364F3200272086 /* Solution10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution10.swift; sourceTree = "<group>"; };
 		ED39A1BD2636988C00272086 /* Solution10_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution10_2.swift; sourceTree = "<group>"; };
+		ED456A4D264622910055FDBF /* Solution15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution15.swift; sourceTree = "<group>"; };
 		EDCFD4F32632584500043A4F /* LeetCodeOffer2021 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCodeOffer2021; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCFD4F62632584500043A4F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EDCFD50226325EEE00043A4F /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				ED21355D263A546B00930C53 /* Solution12.swift */,
 				ED2135AA263AE43B00930C53 /* Solution13.swift */,
 				ED2135AD263B8F6F00930C53 /* Solution14.swift */,
+				ED456A4D264622910055FDBF /* Solution15.swift */,
 			);
 			path = LeetCodeOffer2021;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED456A4E264622910055FDBF /* Solution15.swift in Sources */,
 				EDCFD4F72632584500043A4F /* main.swift in Sources */,
 				ED21355E263A546B00930C53 /* Solution12.swift in Sources */,
 				ED39A1BB26364F3200272086 /* Solution10.swift in Sources */,

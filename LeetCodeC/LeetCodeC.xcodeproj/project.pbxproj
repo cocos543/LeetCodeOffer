@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED39A1A12632BDDA00272086 /* Solution05.c in Sources */ = {isa = PBXBuildFile; fileRef = ED39A1A02632BDDA00272086 /* Solution05.c */; };
 		EDCFD4C426310A4200043A4F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD4C326310A4200043A4F /* main.c */; };
 		EDCFD4D12631186E00043A4F /* Solution03.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD4D02631186E00043A4F /* Solution03.c */; };
 		EDCFD4D826311B5400043A4F /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCFD4D726311B5400043A4F /* utils.c */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED39A19F2632BDDA00272086 /* Solution05.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solution05.h; sourceTree = "<group>"; };
+		ED39A1A02632BDDA00272086 /* Solution05.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Solution05.c; sourceTree = "<group>"; };
 		EDCFD4C026310A4200043A4F /* LeetCodeC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCodeC; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCFD4C326310A4200043A4F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EDCFD4CF2631186E00043A4F /* Solution03.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solution03.h; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 				EDCFD4D02631186E00043A4F /* Solution03.c */,
 				EDCFD4DF2631295000043A4F /* Solution04.h */,
 				EDCFD4E02631295000043A4F /* Solution04.c */,
+				ED39A19F2632BDDA00272086 /* Solution05.h */,
+				ED39A1A02632BDDA00272086 /* Solution05.c */,
 			);
 			path = LeetCodeC;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				EDCFD4D826311B5400043A4F /* utils.c in Sources */,
 				EDCFD4C426310A4200043A4F /* main.c in Sources */,
 				EDCFD4E12631295000043A4F /* Solution04.c in Sources */,
+				ED39A1A12632BDDA00272086 /* Solution05.c in Sources */,
 				EDCFD4D12631186E00043A4F /* Solution03.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

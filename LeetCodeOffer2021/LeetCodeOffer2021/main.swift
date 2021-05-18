@@ -9,5 +9,4 @@ import Foundation
 
 print("Hello, World!")
 
-print(Solution14().cuttingRope(43))
-print(Solution14().cuttingRope2(43))
+print(Solution15().hammingWeight(0b00000000000000000000000000001011))

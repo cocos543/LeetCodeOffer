@@ -42,9 +42,9 @@ class CQueue {
      */
     
     // 入队栈
-    var inS: Stack
+    var inS: Stack<Int>
     // 出队栈
-    var outS: Stack
+    var outS: Stack<Int>
     
     init() {
         inS = Stack()

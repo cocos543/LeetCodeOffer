@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Stack {
-    private var context: [Int]
+class Stack<T> {
+    private var context: [T]
     init() {
         context = []
     }
@@ -21,16 +21,16 @@ class Stack {
         return context.isEmpty
     }
 
-    func push(_ e: Int) -> Bool {
+    func push(_ e: T) -> Bool {
         context.append(e)
         return true
     }
 
-    func pop() -> Int? {
-//        if context.count == 0 {
-//            return nil
-//        }
-
+    func pop() -> T? {
         return context.popLast()
+    }
+    
+    func top() -> T? {
+        return context.last
     }
 }

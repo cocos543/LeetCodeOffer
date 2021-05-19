@@ -28,3 +28,20 @@ import Foundation
 
  通过次数206,614提交次数279,057
  */
+class Solution24 {
+    func reverseList(_ head: ListNode?) -> ListNode? {
+        if head == nil {
+            return nil
+        }
+        var rhead: ListNode?
+        var p = head
+        
+        while p != nil {
+            let temp = p!.next
+            p!.next = rhead
+            rhead = p
+            p = temp
+        }
+        return rhead
+    }
+}

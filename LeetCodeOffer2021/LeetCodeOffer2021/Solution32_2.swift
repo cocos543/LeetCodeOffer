@@ -49,8 +49,43 @@ import Foundation
  *     }
  * }
  */
-class Solution {
+class Solution32_2 {
     func levelOrder(_ root: TreeNode?) -> [[Int]] {
-
+        if root == nil {
+            return []
+        }
+        // 预先通过当前层计算出下一层的节点数, 并记录好层号
+        var level = 0
+        var lnum = 0
+        var remind = 1
+        var ret = [[Int]]()
+        ret.append([])
+        
+        let q = Queue<TreeNode>()
+        _ = q.enQueue(root)
+        
+        
+        while !q.isEmpty() {
+            let node = q.deQueue()!
+            if remind > 0 {
+                remind -= 1
+            } else {
+                level += 1
+                ret.append([])
+                // 减1是因为本次循环也会消耗一个元素
+                remind = lnum - 1
+                lnum = 0
+            }
+            ret[level].append(node.val)
+            if node.left != nil {
+                lnum += 1
+                _ = q.enQueue(node.left)
+            }
+            if node.right != nil {
+                lnum += 1
+                _ = q.enQueue(node.right)
+            }
+        }
+        return ret
     }
 }
